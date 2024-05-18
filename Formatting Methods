@@ -1,0 +1,9 @@
+public class FormattingMethods {
+    public static void main(String[] args){
+        int a=10; //intializing a value 
+        int b=15; //intializing b value
+        var c=28;  //intializing c value to contextual variable called var
+        System.out.printf("a=%d%nb=%d%nc=%d%n",a,b,c);
+    }
+    
+}
