@@ -1,0 +1,24 @@
+import java.util.*;
+public class Palindrome {
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter the number:");
+        int a=sc.nextInt();
+        int num_rev=0,num=a;
+
+        while(a!=0){
+            int remainder=a%10;
+            num_rev=num_rev*10+remainder;
+            a=a/10;
+        }
+        if(num==num_rev){
+            System.out.printf("%d is a palindrome number",num);
+        }
+        else{
+            System.out.printf("%d is not a palindrome number",num);
+        }
+        sc.close();
+
+    }
+    
+}
