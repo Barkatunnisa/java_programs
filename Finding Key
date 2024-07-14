@@ -1,0 +1,47 @@
+import java.util.*;
+import java.io.*;
+import java.lang.*;
+
+public class Main {
+  
+ 
+    static int Largest(int n){ //method for finding largest digit in the number
+      
+      int Largest=0;
+      while(n!=0){
+      int r=n%10;
+      
+      Largest=Math.max(r,Largest);
+      n=n/10;
+      }
+      return Largest;
+    }
+    static int Smallest(int n){ //method for finding smallest digit in the number
+      
+      int Smallest=9;
+      while(n!=0){      int r=n%10;
+      
+      Smallest=Math.min(r,Smallest);
+      n=n/10;
+      }
+      return Smallest;
+    }
+    static int FindKey(int n1,int n2,int n3){   //method for finding the key
+      int SumOfLargest=Largest(n1)+Largest(n2)+Largest(n3);
+      int SumOfSmallest=Smallest(n1)+Smallest(n2)+Smallest(n3);
+      int s=SumOfLargest-SumOfSmallest;
+      return s;
+    }
+    public static void main(String[] args) { //main method
+      Scanner sc=new Scanner(System.in);
+      int n1=sc.nextInt();
+      int n2=sc.nextInt();
+      int n3=sc.nextInt();
+      if((n1>=1000 && n1<=9999) && (n2>=1000&& n2 <=9999) && (n3>=1000&& n3 <=9999) ){
+      System.out.println(FindKey(n1,n2,n3));
+      }
+      
+      
+      
+  }
+}
