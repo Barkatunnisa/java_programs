@@ -1,0 +1,45 @@
+//MultiLevelInheritence for parameterized constructors
+class base   //base class
+{
+    base(int a,int b){  //parameterized constructor
+        System.out.println("base default");
+        System.out.println(a+b);
+    }
+     void display(){  //instance method
+        System.out.println("base class");
+    }
+}
+class child1 extends base  //child1 class inherits base class
+{
+    child1(int a,int b){   //parameterized constructor
+        super(22,184);          //super class parameterized constructor calling statement
+        System.out.println("child1 default");
+        System.out.println(a+b);
+    }
+      void display(){   //instance method
+          super.display();
+        System.out.println("child1 class");
+    }
+}
+class child2 extends child1    //child2 class inherits child1 class
+{
+    child2(int a,int b){  //parameterized constructor
+        super(90,100);    //super class parameterized constructor calling statement
+        System.out.println(a+b);
+        System.out.println("child2 default");
+    }
+     void display(){   //instance method
+         super.display();
+        System.out.println("child2 is created");
+    }
+}
+public class MultiLevelInheritence
+{
+    public static void main(String args[])  //main method
+    {
+        child2 ch = new child2(1,2);  //object creation for child2 class
+        ch.display();  
+       
+       
+    }
+}
