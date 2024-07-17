@@ -1,0 +1,19 @@
+import java.util.Scanner;
+import java.io.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);  
+        System.out.println("enter the string:");
+        String s=sc.nextLine();   //takes string input from user
+        s=s.toLowerCase();    //converts the string into lower case
+        int count=0;    //intialize count=0
+        for(int i=0;i<s.length();i++){
+            if(((s.charAt(i))=='a')||((s.charAt(i))=='e')||((s.charAt(i))=='i')||((s.charAt(i))=='o')||((s.charAt(i))=='u'))   //checks whether the characters of string are vowel or not
+            {
+                count++;                       //if the character is vowel then count is incremented for every vowel
+            }
+            
+        }
+        System.out.println(count);
+    }
+}
