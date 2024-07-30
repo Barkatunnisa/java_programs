@@ -1,0 +1,23 @@
+public class MikeNikeLake {
+    public static void main(String[] args) {
+        for (int i=1;i<=100;i++) {
+            StringBuilder output = new StringBuilder();
+//take a new empty string using string builder because in java string is immutable,so we are using StringBuilder
+            if(i%3==0) {
+                output.append("Mike");
+            }
+            if(i%5==0) {
+                output.append("Nike");
+            }
+            if(i%7==0) {
+                output.append("Lake");
+            }
+
+            if(output.length() == 0) { //checks if the the length of the output is 0 or not
+                output.append(i);
+            }
+
+            System.out.println(output.toString());  //converts the output into string using toString() method
+        }
+    }
+}
