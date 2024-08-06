@@ -1,0 +1,16 @@
+class Inheritance{
+    Inheritance(){   // constructor
+        System.out.println("Inheritance constructor......");
+    }
+}
+class Child extends Inheritance {
+    Child(){   //child class constructor
+        super();  //super class constructor calling statement
+        System.out.println("child constructor.....");
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        Child c=new Child();  //object creation for child class
+    }
+}
