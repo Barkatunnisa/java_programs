@@ -1,0 +1,17 @@
+//This keyword
+class One{
+    int a;
+    int b;
+    void fun(int a,int b){
+        this.a=a;
+        this.b=b;
+        System.out.println(this.a+this.b);
+        System.out.println(a+b);
+    }
+}
+public class ThisDemo{
+    public static void main(String args[]){
+        One O=new One();
+        O.fun(1,2);
+    }
+}
