@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+class StringCode {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter a string:");
+        String s = sc.nextLine();
+        StringBuilder k = new StringBuilder();
+        
+        for (int i = s.length() - 1; i >= 0; i--) {
+            k.append(s.charAt(i));
+        }
+        
+        String l=k.toString();
+        if(s.equals(l)){
+            System.out.printf("%s is a palindrome",s);
+        }
+        else{
+            System.out.printf("%s is not a palindrome",s);
+        }
+    }
+}
