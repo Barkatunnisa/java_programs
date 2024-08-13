@@ -1,0 +1,10 @@
+import java.util.Scanner;
+class  FirstDigitAfterDecimal{
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter the float number:");
+        float num=sc.nextFloat();
+        float n=(num-(int)(num))*10;
+        System.out.printf("The first digit after the decimal is %d",(int)n);
+    }
+}
