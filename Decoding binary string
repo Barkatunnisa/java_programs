@@ -1,0 +1,32 @@
+import java.util.Scanner;
+class Decoding{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter the binary encoded string:");
+        String s=sc.nextLine();
+        String n=decode(s);
+        System.out.println("The decoded string in English is:"+n);
+    }
+    public static String decode(String s){
+        StringBuilder n=new StringBuilder();
+        int count=0;
+        for(char c:s.toCharArray()){
+            if(c=='1'){
+                count++;
+            }
+            else{
+                char l=(char)(count+64);
+                n.append(l);
+                count=0;
+                
+            }
+        }
+            if(count>0){
+                char l=(char)(count+64);
+                n.append(l);
+            }
+        
+        return n.toString();
+        
+    }
+}
