@@ -1,0 +1,21 @@
+import java.util.Scanner;
+class StringCompress{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter the string:");
+        String s=sc.nextLine();
+        int count=1;
+        StringBuilder n=new StringBuilder();
+        for(int i=1;i<=s.length();i++){
+            if(i==s.length() || s.charAt(i)!=s.charAt(i-1)){
+                n.append(s.charAt(i-1));
+                n.append(count);
+                count=1;
+            }
+            else{
+                count++;
+            }
+        }
+        System.out.println("The compressed string is "+n.toString());
+    }
+}
