@@ -1,0 +1,30 @@
+import java.util.*;
+public class Interjection {
+    public static void main(String[] args) {
+        int[] array1 = {1, 2, 3, 4, 5};
+        int[] array2 = {4, 5, 6, 7, 8};
+        int[] intersection = findIntersection(array1, array2);
+        System.out.println("Intersection: " + Arrays.toString(intersection));
+    }
+
+    public static int[] findIntersection(int[] array1, int[] array2) {
+        Set<Integer> set1 = new HashSet<>();
+        for (int num : array1) {
+            set1.add(num);
+        }
+        Set<Integer> intersectionSet = new HashSet<>();
+        for (int num : array2) {
+            if (set1.contains(num)) {
+                intersectionSet.add(num);
+            }
+        }
+        int[] intersection = new int[intersectionSet.size()];
+        int i = 0;
+        for (int num : intersectionSet) {
+            intersection[i++] = num;
+        }
+        return intersection;
+    }
+}
+
+
