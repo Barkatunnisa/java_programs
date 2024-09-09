@@ -1,0 +1,23 @@
+import java.util.*;
+public class Cumulative {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter the size of array:");
+        int size=sc.nextInt();
+        int[] arrc=new int[size];
+        int[] arr=new int[size];
+        System.out.println("enter the array elements:");
+        for(int i=0;i<size;i++){
+            arr[i]=sc.nextInt();
+        }
+        arrc[0]=arr[0];
+        for(int i=1;i<size;i++){
+            arrc[i]=arr[i]+arrc[i-1];
+        }
+        System.out.println("The cumulative sum of array elements is:\t");
+        for(int i:arrc){
+            System.out.print(i+" ");
+        }
+        sc.close();
+    }
+}
