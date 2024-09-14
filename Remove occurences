@@ -1,0 +1,13 @@
+public class RemoveOccurances{
+    public static void main(String[] args) {
+        String s="welcome to mettl";
+        String c="l";
+        if(c.length()!=1){
+            return;
+        }
+        char charremove=c.charAt(0);
+        String result=s.replace(String.valueOf(charremove),"");
+        System.out.println(result);
+        
+    }
+}
